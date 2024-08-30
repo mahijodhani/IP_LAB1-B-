@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewakoof - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <table>
+            <tr>
+                <th>
+                    <img height="200" width="200" src="Bewakoof-Logo.jpg" alt="Bewakoof Logo" id="company-logo">
+                </th>
+                <td>
+                    <form id="form">
+                        <input type="search" id="query" name="q" placeholder="Search...">
+                        <button>Search</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main style="padding: 10px;">
+        <!-- Products Section -->
+        <section id="products">
+            <h1>Our Products</h1>
+            <table>
+                <tr>
+                    <td>
+                        <div class="product">
+                            <img height="100" width="100" src="product.jpg" alt="Product 1">
+                            <div class="product-name">Product 1</div>
+                            <div class="product-description">Description for product 1.</div>
+                            <div class="product-price">$19.99</div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product">
+                            <img height="100" width="100" src="product2.jpg" alt="Product 2">
+                            <div class="product-name">Product 2</div>
+                            <div class="product-description">Description for product 2.</div>
+                            <div class="product-price">$29.99</div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product">
+                            <img height="100" width="100" src="product3.jpg" alt="Product 3">
+                            <div class="product-name">Product 3</div>
+                            <div class="product-description">Description for product 3.</div>
+                            <div class="product-price">$39.99</div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product">
+                            <img height="100" width="100" src="product5.jpg" alt="Product 4">
+                            <div class="product-name">Product 4</div>
+                            <div class="product-description">Description for product 4.</div>
+                            <div class="product-price">$49.99</div>
+                            <button class="add-to-cart">Add to Cart</button>
+                            
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+       
+
+
+        <form action="/submit-order" method="POST" style="width: 60%; margin: 0 auto; padding: 20px;">
+            <p style="font-weight: bold;color:black;">Customize Your T-Shirt</p>
+
+                <p>
+                    <label for="design" style="display: inline-block; width: 150px;">Select Design:</label>
+                    <select id="design" name="design" required style="width: 200px;">
+                        <option value="">-- Please Select --</option>
+                        <option value="graphic">Graphic Design</option>
+                        <option value="solid">Solid Color</option>
+                        <option value="striped">Striped</option>
+                        <option value="logo">Logo T-Shirt</option>
+                    </select>
+                </p>
+
+            <p>
+                <label for="size" style="display: inline-block; width: 150px;">Choose Size:</label>
+                <select id="size" name="size" required style="width: 200px;">
+                    <option value="">-- Select Size --</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xl">XL</option>
+                    <option value="xxl">XXL</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="color" style="display: inline-block; width: 150px;">Choose Color:</label>
+                <select id="color" name="color" required style="width: 200px;">
+                    <option value="">-- Select Color --</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="quantity" style="display: inline-block; width: 150px;">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" required style="width: 50px;">
+            </p>
+
+            <p>
+                <label for="special-requests" style="display: inline-block; width: 150px; vertical-align: top;">Special Requests:</label>
+                <textarea id="special-requests" name="special-requests" rows="3" cols="40" placeholder="Any special requests..."></textarea>
+            </p>
+
+            <hr>
+
+            <p style="font-weight: bold;">Provide Delivery Information</p>
+
+            <p>
+                <label for="recipient-name" style="display: inline-block; width: 150px;">Recipient Name:</label>
+                <input type="text" id="recipient-name" name="recipient-name" placeholder="Full Name" required style="width: 250px;">
+            </p>
+
+            <p>
+                <label for="address" style="display: inline-block; width: 150px; vertical-align: top;">Delivery Address:</label>
+                <textarea id="address" name="address" rows="2" cols="40" placeholder="Complete Address" required></textarea>
+            </p>
+
+            <p>
+                <label for="email" style="display: inline-block; width: 150px;">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required style="width: 250px;">
+            </p>
+
+            <p>
+                <label for="phone" style="display: inline-block; width: 150px;">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" style="width: 150px;">
+            </p>
+
+            <p>
+                <label for="delivery-time" style="display: inline-block; width: 150px;">Delivery Time:</label>
+                <input type="time" id="delivery-time" name="delivery-time" required style="width: 150px;">
+            </p>
+
+            <hr>
+
+            <p style="text-align: center;">
+                <button type="submit" style="padding: 10px 20px;">Submit Order</button>
+                <button type="reset" style="padding: 10px 20px; margin-left: 20px;">Reset Form</button>
+            </p>
+        </form>
+
+<!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Online Retail</li>
+                <li>Bewakoof Plus Membership</li>
+                <li>Brand Mall</li>
+            </ul>
+        </section>
+
+        <!-- Promotional Video Section -->
+        <section id="promotions">
+            <h2>Promotional Video</h2>
+            <video controls width="600">
+                <source src="bewakoof_ad.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            
+            <p>Bewakoof Private Limited is an Indian e-commerce company, headquartered in Bangalore, and incorporated in Singapore as a private limited company. The company initially focused on online book sales before expanding into other product categories such as consumer electronics, fashion, home essentials, groceries, and lifestyle products.</p>
+        </section>
+        <section id="testimonials">
+            <h2>Customer Testimonials</h2>
+            <blockquote cite="https://www.bewakoof.com/reviews">
+                <p>Bewakoof has the best quality products. I am a satisfied customer for over 5 years!</p>
+                <footer>- John Doe, <cite>Customer</cite></footer>
+            </blockquote>
+        </section>
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>What is your return policy?</summary>
+                <p>We offer a 30-day return policy on all purchases.</p>
+            </details>
+            <details>
+                <summary>Do you ship internationally?</summary>
+                <p>Yes, we ship to over 100 countries worldwide.</p>
+            </details>
+        </section>
+        
+        
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <table>
+            <caption>Company Details</caption>
+            <tr>
+                <th>Address</th>
+                <td>410 Terry Ave N, Seattle, WA 98109, USA</td>
+            </tr>
+            <tr>
+                <th>Contact</th>
+                <td>(206) 266-1000</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><a href="mailto:info@bewakoof.com">info@bewakoof.com</a></td>
+            </tr>
+        </table>
+        <p>Follow us on social media:</p>
+        <ul>
+            <li><a href="https://facebook.com/flipkart" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/flipkart" target="_blank">Twitter</a></li>
+            <li><a href="https://instagram.com/flipkart" target="_blank">Instagram</a></li>
+            <li><a href="https://linkedin.com/company/flipkart" target="_blank">LinkedIn</a></li>
+        </ul>
+        <p>&copy; 2024 Bewakoof. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
